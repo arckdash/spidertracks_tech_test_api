@@ -1,0 +1,16 @@
+FROM node:16-bullseye-slim
+
+WORKDIR /application
+
+# Needed to run prisma migrations, as this image does not bring openssl installed by default
+# and it's needed to load the right binary target from prisma.
+RUN apt-get update && apt-get install -y openssl
+
+RUN npm install -g \
+    typescript \
+    nodemon
+
+# Don't run production as root
+RUN addgroup --system --gid 1001 spidertracks
+RUN adduser --system --uid 1001 spidertracks
+USER spidertracks

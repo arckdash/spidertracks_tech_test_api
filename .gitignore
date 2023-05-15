@@ -1,0 +1,54 @@
+# Directory that contains project dependencies.
+node_modules
+
+# Directory that contains build version of the source code.
+**/lib
+
+*.log
+
+*.pdf
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# dotenv environment variable files
+.env
+.env.development.local
+.env.test.local
+.env.production.local
+.env.local
+
+# Yarn Integrity file
+.yarn-integrity
+
+# Stores VSCode versions used for testing VSCode extensions
+.vscode-test
+.vscode
+
+# yarn v2
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+packages/base/lib/index.js
+
+.DS_Store
+
+# Directory that maps docker volumes to local folders, only needed for development.
+# exclude everything
+data/*
+# but the folder.
+!data/.gitkeep
+
+.clinic
+
+# As we manage 1 prisma client per bundle were needed
+# We need it to be part of the repo so webpack can resolve ts path aliases.
+# **/prisma/client
