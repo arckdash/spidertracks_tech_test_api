@@ -15,6 +15,17 @@ Navigate to the root repo folder and run:
 $> yarn
 ```
 
+### Build project
+Before firing up the containers run the command:
+```
+$> yarn build
+```
+or 
+```
+$> yarn build:watch
+```
+for development mode.
+
 ### Starting the project
 
 From the root repository folder, run the command:
